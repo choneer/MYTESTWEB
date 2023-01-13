@@ -5,17 +5,24 @@
     <title>标题</title>
     <style type="text/css">
         body{
-            background-image: url(./images/preview.jpg);
-            background-size:auto;
-            height: 100%;
+            background-image/*背景图*/: url(./images/preview.jpg);
+            background-size/*背景图尺寸*/:auto;
+            height/*高度*/: 100%;
         }
         html{
             height: 100%;
         }
+        @keyframes myRotate {/*动画及其名称*/
+            from{opacity: 0}/*透明度*/
+            to{opacity: 100}
+        }
+        h1,p{
+            animation/*特性*/: myRotate 1s infinite/*循环*/;
+        }
     </style>
 </head>
 <body>
-<h1>aaa</h1>啊啊啊
+<h1>aaa</h1>啊啊啊<!--这是注释-->
 <p>内容</p>
 <p>内容2</p>
 </body>
