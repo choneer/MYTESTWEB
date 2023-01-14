@@ -12,12 +12,29 @@
         html{
             height: 100%;
         }
-        @keyframes myRotate {/*动画及其名称*/
-            from{opacity: 20%}/*透明度*/
-            to{opacity: 70%}
+        @keyframes myRotate1 {/*动画及其名称*/
+            0%{opacity: 0}/*透明度*/
+            25%{opacity: 70%}
+            75%{opacity: 0}
+            100%{opacity: 0}
         }
-        h1,p{
-            animation/*特性*/: myRotate 1s infinite/*循环*/;
+        @keyframes myRotate2 {/*动画及其名称*/
+            0%{opacity: 0}/*透明度*/
+            /*进度*/25%{opacity: 0}
+            75%{opacity: 0}
+            100%{opacity: 100}
+        }
+        p{
+            font-size: 50px;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+        #NR1{
+            animation: /*特性*/myRotate1 5s infinite/*循环*/;
+        }
+        #NR2{
+            animation:/*特性*/myRotate2 5s infinite/*循环*/;
         }
     </style>
 </head>
@@ -25,7 +42,7 @@
 <audio src="music/music.mp3" controls="controls" autoplay="autoplay">
 </audio>
 <h1>aaa</h1>啊啊啊<!--这是注释-->
-<p>内容</p>
-<p>内容2</p>
+<p id="NR1">内容</p>
+<p id="NR2">内容2</p>
 </body>
 </html>
