@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>标题</title>
+    <title>这是标题</title>
     <style type="text/css">
         body{
             background-image/*背景图*/: url(./images/preview.jpg);
@@ -15,14 +15,23 @@
         @keyframes myRotate1 {/*动画及其名称*/
             0%{opacity: 0}/*透明度*/
             25%{opacity: 70%}
+            50%{opacity: 0}
             75%{opacity: 0}
             100%{opacity: 0}
         }
         @keyframes myRotate2 {/*动画及其名称*/
             0%{opacity: 0}/*透明度*/
             /*进度*/25%{opacity: 0}
+            50%{opacity: 0}
             75%{opacity: 0}
             100%{opacity: 100}
+        }
+        @keyframes myRotate3 {/*动画及其名称*/
+            0%{opacity: 0}/*透明度*/
+            /*进度*/25%{opacity: 0}
+            50%{opacity: 0}
+            75%{opacity: 100}
+            100%{opacity: 0}
         }
         p{
             font-size: 50px;
@@ -36,13 +45,17 @@
         #NR2{
             animation:/*特性*/myRotate2 5s infinite/*循环*/;
         }
+        #NR3{
+            animation: myRotate3 5s infinite;
+        }
     </style>
 </head>
 <body>
 <audio src="music/music.mp3" controls="controls" autoplay="autoplay">
 </audio>
-<h1>aaa</h1>啊啊<!--这是注释-->
-<p id="NR1">内容</p>
-<p id="NR2">内容2</p>
+<h1>这是aaa</h1>啊啊啊<!--这是注释-->
+<p id="NR1">这是内容1</p>
+<p id="NR2">这是内容2</p>
+<p id="NR3">这是内容3</p>
 </body>
 </html>
